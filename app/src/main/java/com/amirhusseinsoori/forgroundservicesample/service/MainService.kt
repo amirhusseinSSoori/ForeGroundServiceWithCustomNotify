@@ -9,6 +9,9 @@ import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.amirhusseinsoori.forgroundservicesample.*
+import com.amirhusseinsoori.forgroundservicesample.util.CHANNEL_ID_SERVICE
+import com.amirhusseinsoori.forgroundservicesample.util.FOREGROUND_MAIN_SERVICE_ID
+import com.amirhusseinsoori.forgroundservicesample.util.MAI4N_SERVICE_NOTIFICATION_REQUEST_CODE
 import java.util.*
 
 class MainService : Service() {

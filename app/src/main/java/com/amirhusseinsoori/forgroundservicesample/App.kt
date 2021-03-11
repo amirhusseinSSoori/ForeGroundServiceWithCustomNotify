@@ -4,7 +4,7 @@ import android.app.Application
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.os.Build
-import androidx.annotation.RequiresApi
+import com.amirhusseinsoori.forgroundservicesample.util.CHANNEL_ID_SERVICE
 
 class App:Application() {
 
