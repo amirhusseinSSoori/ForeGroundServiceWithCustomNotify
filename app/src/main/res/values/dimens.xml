@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_end_for_layout_notifiy_small_icon">10dp</dimen>
+    <dimen name="margin_top_between_for_layout_notifiy_small_icon">5dp</dimen>
+    <dimen name="size_for_layout_notifiy_small_icon">25dp</dimen>
+</resources>

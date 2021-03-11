@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="4dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_toEndOf="@id/textNotify"
+            android:layout_alignParentBottom="true"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ic_send"/>
+        <TextView
+            android:id="@+id/textNotify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:padding="4dp"
+            android:gravity="center"
+            android:visibility="visible"
+            android:layout_marginStart="@dimen/margin_end_for_layout_notifiy_small_icon"
+            android:layout_marginBottom="@dimen/margin_top_between_for_layout_notifiy_small_icon"
+
+            android:textColor="#4CAF50"
+            android:text="@string/txt_notifyF_txtnotify"/>
+        <ImageView
+            android:id="@+id/noti_img_voip"
+            android:layout_width="@dimen/size_for_layout_notifiy_small_icon"
+            android:layout_height="@dimen/size_for_layout_notifiy_small_icon"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_top_between_for_layout_notifiy_small_icon"
+            android:layout_marginEnd="@dimen/margin_end_for_layout_notifiy_small_icon"
+            android:background="@drawable/ic_voip1"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/noti_img_voip"
+            android:layout_alignBottom="@+id/noti_img_voip"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/noti_img_voip"
+            android:text="Voip Call"
+            android:textColor="@color/orange" />
+
+        <ImageView
+            android:id="@+id/noti_img_mesg"
+            android:layout_width="@dimen/size_for_layout_notifiy_small_icon"
+            android:layout_height="@dimen/size_for_layout_notifiy_small_icon"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_end_for_layout_notifiy_small_icon"
+            android:layout_marginTop="@dimen/margin_top_between_for_layout_notifiy_small_icon"
+            android:layout_below="@id/noti_img_voip"
+            android:background="@drawable/ic_mesg1"/>
+
+        <TextView
+            android:id="@+id/noti_txt_warning_meesage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Messenger"
+            android:layout_below="@id/noti_img_voip"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:layout_toStartOf="@+id/noti_img_mesg"
+
+            android:textColor="@color/orange"/>
+
+        <ImageView
+            android:id="@+id/noti_img_vpn"
+            android:layout_width="@dimen/size_for_layout_notifiy_small_icon"
+            android:layout_height="@dimen/size_for_layout_notifiy_small_icon"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_end_for_layout_notifiy_small_icon"
+            android:layout_marginTop="@dimen/margin_top_between_for_layout_notifiy_small_icon"
+            android:layout_below="@id/noti_img_mesg"
+            android:background="@drawable/ic_vpn1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/noti_img_mesg"
+
+            android:layout_marginTop="6dp"
+
+            android:layout_marginEnd="11dp"
+            android:layout_toStartOf="@+id/noti_img_vpn"
+
+
+            android:gravity="center"
+            android:text="@string/txt_check_setting_vpn"
+            android:textColor="@color/orange" />
+
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

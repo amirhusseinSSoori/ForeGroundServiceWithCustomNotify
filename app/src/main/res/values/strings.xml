@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">forgroundServiceSample</string>
+    <string name="txt_check_setting_voip_call">Voip Call</string>
+    <string name="txt_check_setting_messenger">Messenger</string>
+    <string name="txt_check_setting_vpn">VPN</string>
+    <string name="txt_notifyF_txtnotify">new Message</string>
 </resources>
