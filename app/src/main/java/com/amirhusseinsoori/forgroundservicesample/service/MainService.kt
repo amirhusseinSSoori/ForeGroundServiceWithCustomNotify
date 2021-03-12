@@ -1,10 +1,13 @@
 package com.amirhusseinsoori.forgroundservicesample.service
 
+import android.app.AlarmManager
 import android.app.Notification
 import android.app.PendingIntent
 import android.app.Service
+import android.content.Context
 import android.content.Intent
 import android.os.IBinder
+import android.os.SystemClock
 import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
@@ -51,6 +54,11 @@ class MainService : Service() {
         return pendingIntent != null
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        restartService()
+    }
+
     private fun setCustomNotify() {
         remoteViews = RemoteViews(packageName, R.layout.notification)
         expanded = RemoteViews(packageName, R.layout.notification_expanded)
@@ -94,5 +102,21 @@ class MainService : Service() {
             .setSmallIcon(R.drawable.ic_vpn1)
         this.notification = notificationBuilder.build()
         return notification
+    }
+    private fun restartService() {
+
+        val restartServiceIntent = Intent(applicationContext, this.javaClass)
+        restartServiceIntent.setPackage(packageName)
+
+        val restartServicePendingIntent = PendingIntent.getService(
+            applicationContext,
+            1,
+            restartServiceIntent,
+            PendingIntent.FLAG_ONE_SHOT
+        )
+        val alarmService =
+            applicationContext.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        alarmService[AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime() + 1000] =
+            restartServicePendingIntent
     }
 }

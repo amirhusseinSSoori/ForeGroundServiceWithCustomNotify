@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContextCompat
 import com.amirhusseinsoori.forgroundservicesample.service.MainService
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
                 Intent(this, MainService::class.java)
             )
         }
+
     }
     @SuppressWarnings("deprecation")
     private fun isMyServiceRunning(serviceClass: Class<*>): Boolean {
